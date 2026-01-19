@@ -1,7 +1,7 @@
 FROM n8nio/n8n:2.3.6
 
 # Build argument for cache busting (update this timestamp to force rebuild)
-ARG CACHEBUST=20260119
+ARG CACHEBUST=20260118202843
 
 USER root
 
