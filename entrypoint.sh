@@ -22,9 +22,17 @@ export DB_POSTGRESDB_DATABASE=$N8N_DB_DATABASE
 export DB_POSTGRESDB_USER=$N8N_DB_USER
 export DB_POSTGRESDB_PASSWORD=$N8N_DB_PASSWORD
 
-# Ensure webhook tunneling is enabled for Form Trigger
+# Ensure webhook and Form Trigger support
 export N8N_PAYLOAD_SIZE_MAX=16
 export N8N_METRICS=false
+export N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN=true
+
+# Enable detailed logging to diagnose node loading issues
+export N8N_LOG_LEVEL=info
+export N8N_LOG_OUTPUT=console
+
+# Ensure n8n recognizes its installation path correctly
+export N8N_USER_FOLDER=/home/node/.n8n
 
 # kickstart nodemation
 n8n
